@@ -1,0 +1,31 @@
+{
+  "name": "wordpress-webp-pictures",
+  "version": "1.0.0",
+  "description": "WordPress plugin to replace img tags with pictures and generate web images",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-zip": "^4.2.0"
+  },
+  "scripts": {
+    "build": "phpcs && gulp",
+    "test": "phpcs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revnoah/wordpress-webp-pictures.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "webp"
+  ],
+  "author": "Noah J. Stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revnoah/wordpress-webp-pictures/issues"
+  },
+  "homepage": "https://github.com/revnoah/wordpress-webp-pictures#readme"
+}

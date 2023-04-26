@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="WebpPictures">
+	<description>PHP Code Sniffer profile to help keep code consistent and easier to maintain
+	</description>
+
+	<!-- files to check -->
+	<file>source/webp-pictures.php</file>
+
+	<!-- WordPress standards are close to PSR1 -->
+	<rule ref="PSR1">
+		<!-- Symbols and effects are often mixed in WordPress -->
+		<exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>>
+	</rule>
+
+	<!-- Some good rules from PSR2 -->
+	<rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
+	<rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+	<rule ref="PSR2.ControlStructures.SwitchDeclaration"/>
+
+	<!-- Prevent function calls in for loops -->
+	<rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+
+	<!-- Linux linebreaks -->
+	<rule ref="Generic.Files.LineEndings"/>
+
+	<!-- WordPress -->
+	<!-- <rule ref="WordPress"/> -->
+	<rule ref="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase"/>
+
+	<!-- Covers rule: When embedding multi-line PHP snippets within a HTML block, the
+		 PHP open and close tags must be on a line by themselves. -->
+	<rule ref="Squiz.PHP.EmbeddedPhp"/>
+	<rule ref="Squiz.PHP.EmbeddedPhp.SpacingBefore">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.Indent">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.OpenTagIndent">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.PHP.EmbeddedPhp.SpacingAfter">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Covers rule: Always put spaces after commas, and on both sides of logical,
+		 arithmetic, comparison, string and assignment operators. -->
+	<rule ref="WordPress.WhiteSpace.OperatorSpacing"/>
+	<rule ref="Squiz.Strings.ConcatenationSpacing">
+		<properties>
+			<property name="spacing" value="1"/>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+
+
+	<!-- Try for 80 columns but allow up to 160 -->
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="absoluteLineLimit" value="160"/>
+		</properties>
+	</rule>
+
+	<!-- When a function becomes too complex, it should be refactored -->
+	<rule ref="Generic.Metrics.CyclomaticComplexity">
+		<properties>
+			<property name="complexity" value="4"/>
+			<property name="absoluteComplexity" value="6"/>
+		</properties>
+	</rule>
+
+	<!-- Avoid nesting too deep -->
+	<rule ref="Generic.Metrics.NestingLevel">
+		<properties>
+			<property name="nestingLevel" value="4"/>
+			<property name="absoluteNestingLevel" value="6"/>
+		</properties>
+	</rule>
+
+	<!-- All-Caps constants -->
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+	<!-- Function defaults -->
+	<rule ref="PEAR.Functions.ValidDefaultValue"/>
+
+	<!-- Prevent deprecated functions, dangerous functions and short tags -->
+	<rule ref="Generic.PHP.DeprecatedFunctions"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
+	<rule ref="Generic.PHP.ForbiddenFunctions"/>
+	<rule ref="Generic.PHP.NoSilencedErrors"/>
+	<rule ref="MySource.PHP.EvalObjectFactory"/>
+	<rule ref="MySource.PHP.ReturnFunctionValue"/>
+
+	<!-- Rules for function doc blocks and inline comments -->
+	<rule ref="PEAR.Commenting.FunctionComment"/>
+	<rule ref="PEAR.Commenting.InlineComment"/>
+
+	<!-- White space -->
+	<rule ref="Generic.Formatting.NoSpaceAfterCast"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+	<rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+</ruleset>

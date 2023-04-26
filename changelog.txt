@@ -1,0 +1,38 @@
+= 1.0.7 =
+* testing WordPress 5.3
+
+= 1.0.6 =
+* added support for javascript files
+* updated readme
+
+= 1.0.5 =
+* added icon and banner assets
+* added copy of license
+
+= 1.0.4 =
+* added readme.txt to plugin archive
+* updates and cleanup
+
+= 1.0.3 =
+* added template hinting for frontend and backend stylesheets
+* refactored code slightly to address code smell
+
+= 1.0.2 =
+* added action to add classes to frontend body class
+* added settings for displaying on the frontend and backend
+* updated phpcs profile
+* updated helper function to return array
+* fixed nested files in includes folder
+* minor updates to readme
+
+= 1.0.1 =
+* updated structure
+* added gulp and npm workflow
+* added markdown files to help with collaboration
+* scaffolded out phpunit.xml, tests and bootstrap.php files but tests incomplete
+* added phpcs.xml file and customized style rules
+* modified code to adhere to phpcs rules, eliminating errors and warnings
+* removed general text field from settings
+
+= 1.0.0 =
+* Initial commit

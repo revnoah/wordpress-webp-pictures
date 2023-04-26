@@ -1,0 +1,18 @@
+{
+    "name": "revnoah/wordpress-webp-pictures",
+    "description": "Replaces JPG and PNG files with picture tags and generates WEBP images using the GD library.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Revnoah\\WordpressWebpPictures\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Noah Stewart",
+            "email": "noah@noahjstewart.com"
+        }
+    ],
+    "require": {}
+}
